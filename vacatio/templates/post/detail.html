@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-3">
+    <h2 class="border-bottom py-2">{{ post.subject }}</h2>
+    <div class="card my-3">
+        <div class="card-body">
+            <div class="card-text" style="white-space: pre-line;">{{ post.content }}</div>
+            <div class="d-flex justify-content-end">
+                <div class="badge badge-light p-2">
+                    {{ post.create_date }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>{{ post.subject }}</h1>
+
+<h3> 신청 내용 </h3>
+<div>
+    {{ post.content }}
+</div>
+
+<h3> 글쓴 날짜 </h3>
+<div>
+    {{ post.create_date }}
+</div>
+
+<h3> 휴가 시작일 </h3>
+<div>
+    {{ post.start_date }}
+</div>
+
+<h3> 휴가 종료일 </h3>
+<div>
+    {{ post.end_date }}
+</div>
+
+<h3> 승인여부 </h3>
+<div>
+    {{ post.status }}
+</div>
+
+<h3> 승인자 </h3>
+<div>
+    {{ post.approver }}
+</div>
+
+<h3> 신청자 </h3>
+<div>
+    {{ post.account.name }}
+</div>
+{% endblock %}
+

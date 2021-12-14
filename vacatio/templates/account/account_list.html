@@ -1,0 +1,9 @@
+{% if account_list %}
+    <ul>
+    {% for account in account_list %}
+        <li> {{ account }} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Account does not exist..</p>
+{% endif %}

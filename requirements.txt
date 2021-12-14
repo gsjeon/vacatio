@@ -1,0 +1,4 @@
+flask
+flake8
+flask-migrate
+Flask-WTF
